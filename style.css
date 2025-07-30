@@ -461,7 +461,7 @@ body {
 @media (min-width: 769px) and (max-width: 1024px) {
     .card-container {
         grid-template-columns: repeat(4, 1fr);
-        grid-auto-rows: minmax(160px, auto);
+        grid-auto-rows: minmax(96px, auto);
         gap: 16px;
         padding: 20px;
         min-height: 400px;
@@ -469,8 +469,8 @@ body {
     
     .card {
         aspect-ratio: 3/4;
-        min-width: 120px;
-        min-height: 160px;
+        min-width: 72px;
+        min-height: 96px;
         height: 100%;
     }
     
