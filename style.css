@@ -210,6 +210,8 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 12px;
+    padding: 8px;
+    box-sizing: border-box;
 }
 
 .card-overlay {
@@ -414,6 +416,10 @@ body {
         height: 100%;
     }
     
+    .card img {
+        padding: 6px;
+    }
+    
     #deck-selection h1 {
         font-size: 2rem;
     }
@@ -445,6 +451,10 @@ body {
         min-height: 138px;
         height: 100%;
     }
+    
+    .card img {
+        padding: 7px;
+    }
 }
 
 /* 태블릿 디자인 */
@@ -462,6 +472,10 @@ body {
         min-width: 120px;
         min-height: 160px;
         height: 100%;
+    }
+    
+    .card img {
+        padding: 8px;
     }
     
     .selected-cards-grid {
@@ -484,6 +498,10 @@ body {
         min-width: 144px;
         min-height: 192px;
         height: 100%;
+    }
+    
+    .card img {
+        padding: 10px;
     }
     
     .selected-cards-grid {
