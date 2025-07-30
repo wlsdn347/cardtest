@@ -164,7 +164,7 @@ body {
 /* 카드 컨테이너 */
 .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 25px;
     margin-bottom: 40px;
     max-height: 500px;
@@ -174,6 +174,8 @@ body {
     border-radius: 15px;
     backdrop-filter: blur(10px);
     margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .card {
@@ -185,6 +187,11 @@ body {
     position: relative;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    min-height: 0;
+    flex-shrink: 0;
 }
 
 .card:hover {
@@ -377,7 +384,7 @@ body {
 }
 
 /* 반응형 디자인 */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .deck-options {
         flex-direction: column;
         align-items: center;
@@ -393,9 +400,16 @@ body {
     }
     
     .card-container {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-        gap: 20px;
-        max-height: 400px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        max-height: 350px;
+        padding: 15px;
+    }
+    
+    .card {
+        aspect-ratio: 3/4;
+        min-width: 120px;
+        min-height: 160px;
     }
     
     #deck-selection h1 {
@@ -414,12 +428,34 @@ body {
     }
 }
 
+@media (min-width: 481px) and (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        max-height: 400px;
+        padding: 18px;
+    }
+    
+    .card {
+        aspect-ratio: 3/4;
+        min-width: 130px;
+        min-height: 173px;
+    }
+}
+
 /* 태블릿 디자인 */
 @media (min-width: 769px) and (max-width: 1024px) {
     .card-container {
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-        gap: 22px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
         max-height: 450px;
+        padding: 20px;
+    }
+    
+    .card {
+        aspect-ratio: 3/4;
+        min-width: 150px;
+        min-height: 200px;
     }
     
     .selected-cards-grid {
@@ -431,9 +467,15 @@ body {
 /* 큰 화면 디자인 */
 @media (min-width: 1025px) {
     .card-container {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 30px;
         max-height: 600px;
+    }
+    
+    .card {
+        aspect-ratio: 3/4;
+        min-width: 180px;
+        min-height: 240px;
     }
     
     .selected-cards-grid {
