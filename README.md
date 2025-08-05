@@ -19,9 +19,9 @@ deck/
 ├── script.js           # JavaScript 로직
 ├── README.md           # 프로젝트 설명
 └── img/                # 카드 이미지 폴더
-    ├── img_fire/       # 불 속성 카드들
-    ├── img_water/      # 물 속성 카드들
-    └── img_leaf/       # 풀 속성 카드들
+    ├── img_fire/       # 불 속성 카드 20장
+    ├── img_water/      # 물 속성 카드 20장
+    └── img_leaf/       # 풀 속성 카드 20장
 ```
 
 ## 실행 방법

@@ -73,8 +73,8 @@ class CardGame {
 
         const folder = folderMap[deckType];
         
-        // 1부터 49까지의 카드 번호 (card.png 제외)
-        for (let i = 1; i <= 49; i++) {
+        // 1부터 20까지의 카드 번호 (card.png 제외)
+        for (let i = 1; i <= 20; i++) {
             const cardPath = `img/${folder}/card-${i}.png`;
             cards.push({
                 id: i,
